@@ -425,6 +425,10 @@ Handles all three cases atomically:
 - **Single match:** Old head gets `COMPONENT_PARENT` to new event; new event gets `DFS_NEXT` to old head and inherits `LAST_DFS_NODE_IN_COMP`.
 - **Merge:** All old heads get `COMPONENT_PARENT` to new event; DFS chains concatenated; new event prepended.
 
+
+<img width="612" height="2500" alt="Untitled drawing (6)" src="https://github.com/user-attachments/assets/0bc7db25-a2de-4062-867b-6750e3ea74e5" />
+
+
 > **Important:** Online ingestion must be single-threaded to maintain the forest invariant (COMPONENT_PARENT out-degree ≤ 1).
 
 
